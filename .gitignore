@@ -1,7 +1,8 @@
 
 # Python Backend
 venv/
-__pycache__/c
+__pycache__/
+*.pyc
 
 # Logs
 logs

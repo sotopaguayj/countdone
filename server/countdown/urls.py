@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('guest/', include('countdown_app.urls'))
+    path('event/', include('countdown_app.urls'))
 ]
