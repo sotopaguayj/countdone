@@ -7,7 +7,7 @@ function MainPage () {
 
   return (
     <>
-      <div>MainPage</div>
+      <div className='text-5xl'>MainPage</div>
       {
         isLoading ? (
           <p>Cargando...</p>
