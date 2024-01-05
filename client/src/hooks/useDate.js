@@ -1,17 +1,23 @@
 import { useEffect, useState } from 'react'
+import eventDate from '../api/event'
 
 const useDate = () => {
   const [date, setDate] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const [isError, setIsError] = useState(null)
+  const [isError, setIsError] = useState(false)
 
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/event/api/v1/event')
-      .then(res => res.json())
-      .then((data) => setDate(data[0].date))
-      .catch(() => setIsError(true))
-      .finally(() => setIsLoading(false))
+
+    const fetchData = async() => {
+      const { isError, date } = await eventDate()
+      setIsError(isError)
+      setDate(date)
+      setIsLoading(false)
+    }
+
+    fetchData()
+
   }, [])
 
 
