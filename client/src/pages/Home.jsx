@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import useCountdown from '../hooks/useCountdown'
 import useDate from '../hooks/useDate'
 
@@ -17,6 +18,7 @@ function MainPage () {
           <p>Ha ocurrido un error</p>
         )
       }
+      <Link to='confirm_assist'>Confirma tu asistencia aqui!</Link>
     </>
 
   )
