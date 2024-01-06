@@ -27,6 +27,8 @@ pip install virtualenv
 ```
 
 - Create the virtual environment in server folder
+
+For MacOS/Linux/WSL
 ```bash
 python -m venv venv
 ```
