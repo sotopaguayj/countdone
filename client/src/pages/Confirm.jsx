@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Input from '../components/Input'
 
 function Confirm() {
   const navigate = useNavigate()
@@ -17,9 +18,9 @@ function Confirm() {
 
   return (
     <>
-      <h3>Confirmación de asistencia</h3>
-      <form onSubmit={ handleSubmit }>
-        <input className='' type='number' placeholder='Digita tu código de confirmación' name='confirm_code' value={ confirmCode } onChange={ handleChange } required/>
+      <h3 className='text-2xl text-center font-bold uppercase m-4 text-white'>Confirmación de asistencia</h3>
+      <form onSubmit={ handleSubmit } className='max-w-sm mx-auto'>
+        <Input onChange={ handleChange } value={ confirmCode } />
         <button type='submit'>CONFIRMAR</button>
       </form>
     </>
