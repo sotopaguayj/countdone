@@ -43,3 +43,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+- Run the server
+```bash
+python manage.py runserver
+```
+
