@@ -11,7 +11,7 @@ function MainPage() {
   return (
     <>
       <header className='text-5xl uppercase text-slate-50 text-center'>MainPage</header>
-      <main className='text-center'>
+      <section className='text-center'>
         {
           isLoading ? (
             <p>Cargando...</p>
@@ -29,7 +29,7 @@ function MainPage() {
           )
         }
 
-      </main>
+      </section>
     </>
 
   )
