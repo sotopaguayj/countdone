@@ -25,4 +25,5 @@ class Guest(models.Model):
 
 @receiver(pre_save, sender=Guest)
 def random_number(sender, instance, **kwargs):
-  instance.confirm_code = randint(100000, 999999)
+  if not instance.id or instance.confirm_code is None:
+    instance.confirm_code = randint(100000, 999999)
