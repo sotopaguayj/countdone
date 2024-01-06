@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import eventDate from '../api/event'
 
 const useDate = () => {
-  const [date, setDate] = useState([])
+  const [date, setDate] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
 
