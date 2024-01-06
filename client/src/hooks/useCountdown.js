@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react'
 import useDate from './useDate'
 
 const useCountdowm = () => {
-  const [daysLeft, setDaysLeft] = useState(0)
-  const [monthsLeft, setMonthsLeft] = useState(0)
+  const [timeLeft, setTimeLeft] = useState({
+    months: 0,
+    days: 0
+  })
+  
   const { date } = useDate()
 
   useEffect(() => {
@@ -17,16 +20,18 @@ const useCountdowm = () => {
       const days = Math.ceil(diff / (1000 * 60 * 60 * 24))
       const months = Math.floor(days / 30)
       const daysLeft = months >= 1 ? days - (months * 30) : days
-
-      setDaysLeft(daysLeft)
-      setMonthsLeft(months)
+      
+      setTimeLeft({
+        days: daysLeft, 
+        months
+      })
     }
     const interval = setInterval(dateCounter, 1000)
 
     return () => clearInterval(interval)
   })
 
-  return { daysLeft, monthsLeft }
+  return { daysLeft: timeLeft.days, monthsLeft: timeLeft.months }
 }
 
 export default useCountdowm
