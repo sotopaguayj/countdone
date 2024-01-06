@@ -5,15 +5,36 @@ import Input from '../components/Input'
 function Confirm() {
   const navigate = useNavigate()
   const [confirmCode, setConfirmCode] = useState('')
+  
 
   const handleChange = (event) => {
     const { value } = event.target
     setConfirmCode(value)
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault()
-    navigate('/invitation')
+    const response = await fetch('http://127.0.0.1:8000/event/api/v1/guest/')
+    const data = await response.json()
+    const guest = data.find(guest => guest.confirm_code === parseInt(confirmCode))
+    console.log(data)
+    console.log(guest.id);
+    
+    if(guest) {
+      const response = await fetch(`http://127.0.0.1:8000/event/api/v1/guest/${guest.id}/`,{
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          assist_confirm: true
+        })
+      })
+      const data = await response.json()
+      console.log('Actualizado', data)
+      navigate('/invitation')
+    }
+
   }
 
   return (
