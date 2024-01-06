@@ -19,7 +19,7 @@ function Confirm() {
     <>
       <h3>Confirmación de asistencia</h3>
       <form onSubmit={ handleSubmit }>
-        <input className='' type='number' placeholder='Digita tu código de confirmación' name='confirm_code' value={ confirmCode } onChange={ handleChange }/>
+        <input className='' type='number' placeholder='Digita tu código de confirmación' name='confirm_code' value={ confirmCode } onChange={ handleChange } required/>
         <button type='submit'>CONFIRMAR</button>
       </form>
     </>
