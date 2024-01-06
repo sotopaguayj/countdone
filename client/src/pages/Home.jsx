@@ -16,16 +16,19 @@ function MainPage() {
           isLoading ? (
             <p>Cargando...</p>
           ) : !isError ? (
-            <div className='flex justify-center gap-x-4'>
-              <Digit value={ monthsLeft } name='Meses' />
-              <Digit value={ daysLeft } name='Días' />
-            </div>
+            <>
+              <div className='flex justify-center gap-x-4'>
+                <Digit value={ monthsLeft } name='Meses' />
+                <Digit value={ daysLeft } name='Días' />
+
+              </div>
+              <Link to='confirm_assist' className='text-white text-lg font-bold uppercase'>Confirma tu asistencia aqui!</Link>
+            </>
           ) : (
             <p>Ha ocurrido un error</p>
           )
-          }
-        
-        <Link to='confirm_assist' className='text-white text-lg font-bold uppercase'>Confirma tu asistencia aqui!</Link>
+        }
+
       </main>
     </>
 
