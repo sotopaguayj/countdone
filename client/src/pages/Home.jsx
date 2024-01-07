@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import useCountdown from "../hooks/useCountdown";
 import useDate from "../hooks/useDate";
 import Digit from "../components/Digit";
@@ -6,9 +5,9 @@ import Loader from "../components/Loader";
 import Alert from "../components/Alert";
 import NavButton from "../components/NavButton";
 
-function MainPage() {
-  const { isError, isLoading } = useDate();
-  const { daysLeft, monthsLeft } = useCountdown();
+function Home () {
+  const { isError, isLoading } = useDate()
+  const { daysLeft, monthsLeft } = useCountdown()
 
   return (
     <>
@@ -23,8 +22,8 @@ function MainPage() {
         ) : !isError ? (
           <>
             <div className="flex justify-center gap-x-4">
-              <Digit value={monthsLeft} name="Meses" />
-              <Digit value={daysLeft} name="Días" />
+              <Digit value={ monthsLeft } name="Meses" />
+              <Digit value={ daysLeft } name="Días" />
             </div>
             <NavButton
               path="confirm_assist"
@@ -45,4 +44,4 @@ function MainPage() {
   );
 }
 
-export default MainPage;
+export default Home
