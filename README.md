@@ -27,13 +27,13 @@ pip install virtualenv
 ```
 
 - Create the virtual environment in server folder
-
-For MacOS/Linux/WSL
 ```bash
 python -m venv venv
 ```
 
 - Activate the virtual environment
+
+For MacOS/Linux/WSL
 ```bash
 source venv/bin/activate
 ```
