@@ -9,7 +9,7 @@ function Confirm() {
 
   const handleChange = (event) => {
     const { value } = event.target;
-    setConfirmCode(value);
+    if (value.length <= 6) setConfirmCode(value);
   };
 
   const handleSubmit = async (event) => {
