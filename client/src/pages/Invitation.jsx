@@ -1,5 +1,6 @@
 import confeti from "canvas-confetti";
 import { useLocation } from "react-router-dom";
+import GraduationCanvas from "../components/canvas/Graduation";
 
 function Invitation() {
   const location = useLocation();
@@ -16,7 +17,9 @@ function Invitation() {
           />
         </header>
         <div className="col-span-3 flex gap-5 items-center">
-          <img src="/bob.png" className="w-40" />
+          <div className="p-10">
+            <GraduationCanvas />
+          </div>
           <div className="font-semibold  flex flex-col items-start">
             <p>
               El dia de: <span className="underline font-normal">today</span>
