@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 
 function Invitation() {
   const location = useLocation();
-  const { id, name } = location.state;
+  const { name } = location.state;
   confeti();
   return (
     <main className="h-screen grid place-content-center">

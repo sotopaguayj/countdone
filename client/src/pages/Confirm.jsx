@@ -20,7 +20,7 @@ function Confirm() {
     if (guest) {
       const { data } = await confirmAssist({ guest })
       navigate("/invitation", {
-        state: { name: data.name, id: data.event_id },
+        state: { name: data.name },
       })
       
     }}
