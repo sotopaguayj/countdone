@@ -4,12 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+* {
   font-family: 'Lato', sans-serif;
-}
-
-body {
-  background-color: #131313;
+  transition: ease-in;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -20,4 +17,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.asd{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
+}
+#wrapper{
+  perspective: 1000px;
 }
