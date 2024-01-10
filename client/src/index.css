@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: light dark;
+}
+
 * {
   font-family: 'Lato', sans-serif;
   transition: ease-in;
@@ -19,9 +23,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.asd{
+.tag-clip-path{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-}
-#wrapper{
-  perspective: 1000px;
 }
