@@ -20,7 +20,7 @@ function Graduation () {
     />
     <primitive 
       object={graduation.scene} 
-      scale={ 5 } 
+      scale={ 4 } 
       rotation-y={50}
       position={ [0, -2, 0] }
       rotation={[-0.01, 20, -0.1]}
