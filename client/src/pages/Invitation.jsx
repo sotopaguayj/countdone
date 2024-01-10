@@ -1,6 +1,6 @@
 import confeti from "canvas-confetti";
 import { useLocation } from "react-router-dom";
-import GraduationCanvas from "../components/canvas/Graduation";
+import GraduationCanvas from "../components/canvas/GraduationCanvas";
 import { Tilt } from 'react-tilt'
 import Graduation from "../components/icons/Graduation";
 
