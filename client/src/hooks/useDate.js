@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import eventDate from '../api/event'
+import { eventDate } from '../api/event'
 
-const useDate = () => {
+export const useDate = () => {
   const [date, setDate] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const [isError, setIsError] = useState(false)
@@ -25,4 +25,3 @@ const useDate = () => {
   return { date, isError, isLoading }
 }
 
-export default useDate
