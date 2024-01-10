@@ -1,13 +1,12 @@
-import useCountdown from "../hooks/useCountdown";
-import useDate from "../hooks/useDate";
 import Digit from "../components/Digit";
 import Loader from "../components/Loader";
 import Alert from "../components/Alert";
 import NavButton from "../components/NavButton";
 
+import { useCountdown } from "../hooks/useCountdown";
+
 function Home () {
-  const { isError, isLoading } = useDate()
-  const { daysLeft, monthsLeft } = useCountdown()
+  const { timeLeft, isError, isLoading } = useCountdown()
 
   return (
     <>
@@ -22,8 +21,10 @@ function Home () {
         ) : !isError ? (
           <>
             <div className="flex justify-center gap-x-4">
-              <Digit value={ monthsLeft } name="Meses" />
-              <Digit value={ daysLeft } name="Días" />
+              <Digit value={ timeLeft.months } name="Meses" />
+              <Digit value={ timeLeft.days } name="Días" />
+              <Digit value={ timeLeft.hours } name="Horas" />
+              <Digit value={ timeLeft.minutes } name="Minutos" />
             </div>
             <NavButton
               path="confirm_assist"
