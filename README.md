@@ -4,7 +4,7 @@ App built with React & Django
 
 ## Requirements
 - Node v18.17.0
-- Python 3.12.1
+- Python v3.12.1
 
 ## Environment Setup
 
