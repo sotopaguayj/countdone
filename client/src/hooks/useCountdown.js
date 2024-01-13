@@ -17,15 +17,15 @@ export const useCountdown = () => {
 
     const { minutes, hours, days, months } = dateCounter({ date, now })
     
-    setTimeLeft({
-      minutes: minutes + 1,
-      hours,
-      days, 
-      months,
-
-    })
+    const interval = setInterval(() => {
+      setTimeLeft({
+        minutes,
+        hours,
+        days, 
+        months
+      })
+    }, 1000)
     
-    const interval = setInterval(dateCounter, 1000)
     return () => clearInterval(interval)
 
   }, [date, timeLeft])
