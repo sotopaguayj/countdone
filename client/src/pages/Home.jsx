@@ -21,10 +21,10 @@ function Home () {
         ) : !isError ? (
           <>
             <div className="flex justify-center gap-x-4">
-              <Digit value={ timeLeft.months } name="Meses" />
-              <Digit value={ timeLeft.days } name="Días" />
-              <Digit value={ timeLeft.hours } name="Horas" />
-              <Digit value={ timeLeft.minutes } name="Minutos" />
+              <Digit value={ timeLeft.months || 0 } name="Meses" />
+              <Digit value={ timeLeft.days || 0} name="Días" />
+              <Digit value={ timeLeft.hours || 0} name="Horas" />
+              <Digit value={ timeLeft.minutes || 0} name="Minutos" />
             </div>
             <NavButton
               path="confirm_assist"
