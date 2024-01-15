@@ -9,11 +9,8 @@ function Home () {
   const { timeLeft, isError, isLoading } = useCountdown()
 
   return (
-    <>
-      <header className='md:text-5xl text-3xl font-bold uppercase text-slate-50 text-center'>
-        MainPage
-      </header>
       <section className='text-center flex flex-col max-w-screen-md items-center'>
+        <h1 className='md:text-5xl text-3xl font-bold uppercase text-slate-50'>MainPage</h1>
         {isLoading ? (
           <div className='grid place-content-center'>
             <Loader />
@@ -41,7 +38,6 @@ function Home () {
           </div>
         )}
       </section>
-    </>
   )
 }
 

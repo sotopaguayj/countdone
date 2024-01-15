@@ -26,7 +26,7 @@ function Confirm() {
     }}
 
   return (
-    <>
+    <section>
       <h3 className="text-5xl font-bold uppercase m-4 text-white text-center">
         Confirmación de asistencia
       </h3>
@@ -34,7 +34,7 @@ function Confirm() {
         <Input onChange={ handleChange } value={ confirmCode } />
         <Button type="submit" text="CONFIRMAR" />
       </form>
-    </>
+    </section>
   )
 }
 

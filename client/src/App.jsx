@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <>
-      <main className='min-h-screen grid place-content-center overflow-hidden'>
+      <main className='min-h-screen grid place-items-center overflow-hidden grid-rows-layout'>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
@@ -16,8 +16,8 @@ function App() {
             <Route path='confirm_assist/' element={<Confirm />} />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </main>
-      <Footer />
     </>
   )
 }
