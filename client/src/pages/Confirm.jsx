@@ -27,10 +27,10 @@ function Confirm() {
 
   return (
     <>
-      <h3 className="text-2xl text-center font-bold uppercase m-4 text-white">
+      <h3 className="text-5xl font-bold uppercase m-4 text-white text-center">
         Confirmación de asistencia
       </h3>
-      <form onSubmit={ handleSubmit } className="max-w-sm mx-auto">
+      <form onSubmit={ handleSubmit } className="flex flex-col gap-2 p-4">
         <Input onChange={ handleChange } value={ confirmCode } />
         <Button type="submit" text="CONFIRMAR" />
       </form>
