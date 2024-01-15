@@ -8,7 +8,7 @@ import Footer from './components/Footer'
 function App() {
   return (
     <>
-      <main>
+      <main className='min-h-screen grid place-content-center overflow-hidden'>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
